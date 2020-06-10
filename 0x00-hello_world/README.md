@@ -1,0 +1,1 @@
+This part is for learning how to use Betty, the official Holberton C coding style. 
