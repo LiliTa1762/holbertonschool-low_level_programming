@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- *main - assign a random number to a variable
+ * main - assign a random number to a variable
  *
- * Return: 0
+ * Return: Always 0
  */
 int main(void)
 {
