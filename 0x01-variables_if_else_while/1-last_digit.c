@@ -15,6 +15,7 @@ int n;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	ln = n % 10;
+
 	if (ln > 5)
 	{
 		printf("Las digit of %d is %d and is greater than 5\n", n, ln);
