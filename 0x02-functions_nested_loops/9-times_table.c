@@ -8,13 +8,13 @@ void times_table(void)
 {
 	int a, b, ab, ab1, ab2;
 
-	a= 0;
+	a = 0;
 	while (a <= 9)
 	{
-		b=0;
-		while (b <=9)
+		b = 0;
+		while (b <= 9)
 		{
-			ab= a * b;
+			ab = a * b;
 			ab1 = ab / 10;
 			ab2 = ab % 10;
 			if (b == 0)
