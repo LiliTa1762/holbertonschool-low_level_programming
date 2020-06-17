@@ -11,9 +11,9 @@ int main(void)
 
 	printf("Infinite loop incoming :(\n");
 
-	i = 0;/*Infinite loop */
+	i = 0;
 
-	while (i < 10)
+	while (i < 10) /* Infinite loop */
 	{
 		putchar(i);
 	}
