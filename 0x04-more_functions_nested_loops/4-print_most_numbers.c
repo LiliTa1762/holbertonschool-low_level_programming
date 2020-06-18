@@ -9,6 +9,7 @@
 void print_most_numbers(void)
 {
 	int x = 0;
+
 	while (x < 10)
 
 	{
@@ -16,6 +17,7 @@ void print_most_numbers(void)
 	{
 		_putchar(x);
 	}
+		x++;
 	}
 	{
 		_putchar('\n');
