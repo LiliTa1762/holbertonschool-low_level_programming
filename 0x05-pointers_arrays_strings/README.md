@@ -1,0 +1,1 @@
+This part is the introduction to pointers, arrays and string.
