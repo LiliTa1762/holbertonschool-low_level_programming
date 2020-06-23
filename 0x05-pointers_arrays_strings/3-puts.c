@@ -4,6 +4,7 @@
 /**
  *_puts - function that print
  *
+ *@str: string to print
  *
  *Return: 0
  */
