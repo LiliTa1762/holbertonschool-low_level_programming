@@ -10,7 +10,7 @@
 
 void swap_int(int *a, int *b)
 {
-	int temporal = *a;
+	int temp = *a;
 	*a = *b;
-	*b = temporal;
+	*b = temp;
 }
