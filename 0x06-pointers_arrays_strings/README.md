@@ -1,0 +1,1 @@
+This one is the second part of pointers, arrays and strings.
