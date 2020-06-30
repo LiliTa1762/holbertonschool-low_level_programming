@@ -13,8 +13,8 @@ void reverse_array(int *a, int n)
 	for (count = 0; a[count] < n / 2; count++)
 	{
 		temp = *(a + count);
-		*(a + count) = *(a + (n - count - 1));
-		*(a + (n - count - 1)) = temp;
+		*(a + count) = *(a + n - count - 1);
+		*(a + n - count - 1) = temp;
 	}
 
 }
