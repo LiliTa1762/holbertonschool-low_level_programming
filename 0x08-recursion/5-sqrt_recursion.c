@@ -7,13 +7,13 @@
 */
 int square_root(int count, int n)
 {
-if (count * count == n)
-return (count);
+	if (count * count == n)
+		return (count);
 
-if (count * count > n)
-return (-1);
+	if (count * count > n)
+		return (-1);
 
-return (square_root(count + 1, n));
+	return (square_root(count + 1, n));
 }
 
 /**
@@ -29,5 +29,5 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (square_root(n, 0));
+	return (square_root(1, n));
 }
