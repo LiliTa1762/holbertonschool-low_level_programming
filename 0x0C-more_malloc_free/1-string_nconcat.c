@@ -22,11 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		(s2 = "");
 
-	for (counter = 0; s1[counter] != '\0'; counter++) /*recorre el primer string dest*/
+	for (counter = 0; s1[counter] != '\0'; counter++) /*string dest*/
 		;
 	for (counter2 = 0; s2[counter2] != '\0'; counter2++) /*recorre el string src*/
 		;
-	a = malloc(sizeof(char) * (counter + n)+ 1);
+	a = malloc(sizeof(char) * (counter + n) + 1);
 	if (a == NULL)
 		return (NULL);
 
