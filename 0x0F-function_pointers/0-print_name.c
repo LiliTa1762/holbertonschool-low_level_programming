@@ -5,9 +5,9 @@
  *print_name - print a name
  *@name: name
  *@f: pointer function
- *return: 0
+ *Return: 0
  */
-void print_name(char *name, void (*f)(char *nam))
+void print_name(char *name, void (*f)(char *))
 {
-	(f)(name);
+	f(name);
 }
