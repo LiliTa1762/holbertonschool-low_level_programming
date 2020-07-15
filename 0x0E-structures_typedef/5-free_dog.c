@@ -2,10 +2,13 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- *dog_t - struct
+ *free_dog - function
  *@d: pointer
  */
 void free_dog(dog_t *d)
 {
-	free (d);
+	if (d != NULL)
+		free(d->owner);
+	free(d->name);
+	free(d);
 }
