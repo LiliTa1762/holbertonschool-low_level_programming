@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ *_cmp - function
+ *@s1: pointers 1
+ *@s2: pointers 2
+ *Return: 0 or 1
+ */
 int _cmp(char *s1, char *s2)
 {
 	for (; *s1 && *s2; s1++, s2++)
