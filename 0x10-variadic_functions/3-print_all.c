@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 /**
  *_switchd - function switch
- *@list: va_list
+ *@lst: va_list
  *@c: variable
  *Return: void
  */
@@ -11,7 +11,7 @@ void _switchd(va_list lst, char c)
 {
 	char *p;
 
-	switch(c)
+	switch (c)
 	{
 	case 'c':
 	printf("%c", va_arg(lst, int));
