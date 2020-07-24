@@ -1,20 +1,5 @@
 #include "lists.h"
 /**
- *_strlen - returns the length of a string
- *@s: pointer
- *Return: 0
- */
-int _strlen(char *s)
-{
-	int r = 0;
-
-	while (s[r] != '\0')
-		r++;
-
-	return (r);
-}
-
-/**
  *add_node_end - function to add a node at the end
  *@head: double pointer
  *@str: contant char
@@ -48,4 +33,19 @@ list_t *add_node_end(list_t **head, const char *str)
 		i->next = newnode;
 	}
 	return (newnode);
+}
+
+/**
+ *_strlen - returns the length of a string
+ *@s: pointer
+ *Return: 0
+ */
+int _strlen(char *s)
+{
+	int r = 0;
+
+	while (s[r] != '\0')
+		r++;
+
+	return (r);
 }
