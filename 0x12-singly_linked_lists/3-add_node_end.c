@@ -8,7 +8,7 @@ int _strlen(char *s)
 {
 	int r = 0;
 
-	while (s[r] != '\0')
+	while (s[r])
 		r++;
 
 	return (r);
@@ -23,7 +23,7 @@ int _strlen(char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *newnode, *i = *head;
+	list_t *newnode,  *i = *head;
 
 	newnode = malloc(sizeof(list_t));
 
