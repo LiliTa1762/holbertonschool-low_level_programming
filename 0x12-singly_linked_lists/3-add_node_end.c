@@ -23,32 +23,32 @@ int _strlen(char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *newnode = NULL,  *i = NULL;
+	list_t *new = NULL, *temp = NULL, *address = NULL;
+	int i;
 
-	newnode = malloc(sizeof(list_t));
-
-	if (!newnode)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 	{
-		free(newnode);
+		free(new);
 		return (NULL);
 	}
-	newnode->str = strdup(str);
-	newnode->len = _strlen(newnode->str);
-
+	new->str = strdup(str);
+	for (i = 0; str[i]; i++)
+	{}
+	new->len = i;
 	if (*head == NULL)
 	{
-		*head = newnode;
-		return (newnode);
+		*head = new;
+		return (new);
 	}
 	else
+		temp = *head;
+	/* here I find the last node */
+	for (i = 0; temp != NULL; i++)
 	{
-		i = *head;
+		address = temp;
+		temp = temp->next;
 	}
-	while (i->next)
-	{
-		i = i->next;
-	}
-	i->next = newnode;
-
-	return (newnode);
+	address->next = new;
+	return (new);
 }
