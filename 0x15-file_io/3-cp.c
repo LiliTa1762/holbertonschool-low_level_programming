@@ -10,29 +10,36 @@
  */
 int main(int ac, char *av[])
 {
-	int file, file1, c, c1;
-	ssize_t r, w;
+	int file, file1;
+	ssize_t r, w, c, c1;
 	char buffer[1024];
 
 	if (ac != 3)
+	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	}
 	file = open(av[1], O_RDONLY);
 	if (file == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+	}
+
 	file1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file1 == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file 1 %s\n", av[2]), exit(99);
+	}
 	r = w = 1;
 	while (r)
 	{
 		r = read(file, buffer, 1024);
 		if (r == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read to file 1 %s\n", av[1]), exit(98);
-		else
+		if (r > 0)
 		{
-		w = write(file1, buffer, r);
-		if (w == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", av[2]), exit(99);
+			w = write(file1, buffer, r);
+			if (w == -1)
+				dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", av[2]), exit(99);
 		}
 	}
 	c = close(file);
