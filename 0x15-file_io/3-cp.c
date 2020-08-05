@@ -9,7 +9,6 @@
  *Return: 0
  */
 int main(int ac, char *av[])
-	int main(int ac, char *av[])
 {
 	int file, file1;
 	ssize_t r, w, c, c1;
