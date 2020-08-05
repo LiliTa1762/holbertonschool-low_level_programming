@@ -22,15 +22,17 @@ int main(int ac, char *av[])
 	file1 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to file 1 %s\n", av[2]), exit(99);
-	while (r)
+	while (r == 1024)
 	{
 		r = read(file, buffer, 1024);
 		if (r == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read to file 1 %s\n", av[1]), exit(98);
-
+		else
+		{
 		w = write(file1, buffer, r);
 		if (w == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", av[2]), exit(99);
+		}
 	}
 	c = close(file);
 	if (c == -1)
