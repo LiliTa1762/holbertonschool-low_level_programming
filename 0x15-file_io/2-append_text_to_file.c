@@ -7,7 +7,7 @@
 #include <fcntl.h>
 
 /**
- *append_text_to_file
+ *append_text_to_file - append to file
  *@filename: name of the file
  *@text_content: NULL terminating string, to add at the end
  *Return: 1, -1
