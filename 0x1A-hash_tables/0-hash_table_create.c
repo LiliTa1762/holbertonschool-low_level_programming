@@ -4,7 +4,7 @@
 #include "hash_tables.h"
 
 /**
- *hash_table_create: function that returns a pointer
+ *hash_table_create - function that returns a pointer
  *@size: size of the arrya
  *Return: a pointer to the newly hash table
  */
