@@ -5,9 +5,8 @@ R = 5
 C = 6
 
 
-# Find the number of covered side for grid[i][j].
 def num_of_sides(grid, i, j):
-
+    """Find the number of covered side for grid[i][j]."""
     count = 0
 
     # Going up
@@ -29,8 +28,8 @@ def num_of_sides(grid, i, j):
     return count
 
 
-# Returns sum of perimeter of shapes formed with "1"
 def island_perimeter(grid):
+    """Getting the perimeter"""
 
     perimeter = 0
 
