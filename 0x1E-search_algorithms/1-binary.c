@@ -15,16 +15,12 @@ void print_array(int *array, size_t l, size_t r)
 	printf("Searching in array: ");
 	for (i = l; i <= r; i++)
 	{
-		printf("%d, ", array[i]);
+		printf("%d", array[i]);
 			if (i == r)
 				printf("\n");
 			else
-			{
 				printf(", ");
-			}
-
 	}
-
 }
 
 /**
@@ -47,23 +43,17 @@ int binary_search(int *array, size_t size, int value)
 	while (l <= r)
 	{
 		print_array(array, l, r);
-		m = ((l + r) / 2);
+
+		m = (l + r) / 2;
+
+		if (array[m] == value)
+			return (m);
 
 		if (array[m] < value)
-		{
 			l = m + 1;
-		}
-
-		else if (array[m] > value)
-		{
-			r = m - 1;
-			print_array(array, l, r);
-		}
 
 		else
-		{
-			return (m);
-		}
+			r = m - 1;
 	}
 	return (-1);
 }
