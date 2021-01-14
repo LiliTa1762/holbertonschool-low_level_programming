@@ -4,8 +4,9 @@
 
 /**
  * print_array - function to print array
- * @size: size of array
- * @value: value to return
+ * @array: array to searching
+ * @r: size of array
+ * @l: value to return
 */
 void print_array(int *array, size_t l, size_t r)
 {
@@ -19,11 +20,11 @@ void print_array(int *array, size_t l, size_t r)
 				printf("\n");
 			else
 			{
-				printf(", " );
+				printf(", ");
 			}
-			
+
 	}
-	
+
 }
 
 /**
@@ -41,7 +42,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	
+
 
 	while (l <= r)
 	{
